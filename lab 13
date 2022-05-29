@@ -1,0 +1,38 @@
+// Program to show multiple inheritance.
+
+#include <iostream>
+using namespace std;
+
+class Vehicle
+{
+public:
+    Vehicle()
+    {
+        cout << "This is a the vehicle.\n";
+    }
+};
+
+class Car
+{
+public:
+    Car()
+    {
+        cout << "This is a car.\n";
+    }
+};
+
+class Maruti : public Vehicle, public Car
+{
+public:
+    Maruti()
+    {
+        cout << "This is the Maruti\n";
+    }
+};
+
+int main()
+{
+
+    Maruti obj;
+    return 0;
+}
