@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+
+class Shape
+{
+
+protected:
+    int sides;
+
+public:
+    virtual void numberOfSide() = 0;
+};
+
+class Triangle : public Shape
+{
+
+public:
+    void numberOfSide()
+    {
+        sides = 3;
+        cout << "The sides in Triangle is  " << sides << endl;
+    }
+};
+
+class TrapeZoid : public Shape
+{
+
+public:
+    void numberOfSide()
+    {
+        sides = 4;
+        cout << "The sides in Trapezoid is  " << sides << endl;
+    }
+};
+
+class Hexagon : public Shape
+{
+
+public:
+    void numberOfSide()
+    {
+        sides = 6;
+        cout << "The sides in Trapezoid is  " << sides << endl;
+    }
+};
+
+int main()
+{
+    Shape *s;
+
+    Triangle t;
+    s = &t;
+    s->numberOfSide();
+
+    TrapeZoid T;
+    s = &T;
+    s->numberOfSide();
+
+    Hexagon h;
+    s = &h;
+    s->numberOfSide();
+
+    return 0;
+}
