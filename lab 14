@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+class Vehicle
+{
+public:
+    Vehicle()
+    {
+        cout << "There are different type of vehicles.\n";
+    }
+};
+
+class Car : public Vehicle
+{
+public:
+    Car()
+    {
+        cout << "This is a car.\n";
+    }
+};
+
+class Fourwheeler: public Car
+{
+public:
+    Fourwheeler()
+    {
+        cout << "Car is generally fourwheeler.\n";
+    }
+};
+
+int main()
+{
+
+    Fourwheeler obj;
+
+    return 0;
+}
