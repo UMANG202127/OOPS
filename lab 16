@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+
+// Declaration of Base class
+class UNIVERSITY
+{
+public:
+    // Usage of virtual constructor
+    virtual void price()
+    {
+        cout << "UNIVERSITY IS CUH ";
+    }
+};
+
+// Declaration of Derived calss
+class CSE : public UNIVERSITY
+{
+public:
+    void price()
+    {
+        cout << "This is CSE Department.\n";
+        cout << "Admission price is 60k.\n";
+    }
+};
+
+// Declaration of 2nd derived class
+class CIVIL : public UNIVERSITY
+{
+public:
+    void price()
+    {
+        cout << "This is CIVIL Department\n";
+        cout << "Admission price is 50k.\n";
+    }
+};
+
+int main()
+{
+
+    // base class pointer
+    UNIVERSITY *C;
+    CSE a;
+
+    // initilization of reference variable
+    C = &a;
+    C->price();
+
+    CIVIL b;
+
+    // initilization of reference variable
+    C = &b;
+    C->price();
+
+    return 0;
+}
